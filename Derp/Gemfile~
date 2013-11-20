@@ -6,10 +6,18 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+<<<<<<< HEAD
+=======
+#this is an edit -Josh
+>>>>>>> 374a87811fdce59f82862bcd5111f99459434836
 
 
 # Gems used only for assets and not required
 # in production environments by default.
+<<<<<<< HEAD
+=======
+# I'll add a comment here
+>>>>>>> 374a87811fdce59f82862bcd5111f99459434836
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
