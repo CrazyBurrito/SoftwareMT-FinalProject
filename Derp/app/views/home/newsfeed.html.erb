@@ -1,3 +1,5 @@
 <h2>Newsfeed</h2>
 <%= render 'posts/form' %>
-@post = Post.new
+<% @activities.each do |activity| %>
+    <%= render_activity(activity) %>
+<% end %>

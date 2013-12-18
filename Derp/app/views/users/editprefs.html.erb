@@ -1,32 +1,9 @@
 <h2>Edit Preferences </h2>
-<%= form_for(User.new) do |f| %>
+<%= form_for :user do |f| %>
   Name: <%= f.text_field :name %>
-  Work : <%= f.text_field :job %>
 
-
+ <%= f.submit "Update" %>
   <% end %>
 
-  <%= f.submit %>
 
-#<%= form_for @user do |f| %>
 
- # <div><%= f.label :work %><br />
-  #<%= f.work_field :job %></div>
-
- # <div><%= f.label :education %><br />
-  #<%= f.education_field :school %></div>
-
-#  <div><%= f.label :location %><br />
- # <%= f.location_field :home %></div>
-
-#  <div><%= f.label :birthday %><br />
- # <%= f.birthday_field :bday %></div>
-
-  #<div><%= f.label :gender %><br />
-#  <%= f.gender_field :gender %></div>
-
- # <div><%= f.label :hobbies %><br />
-  #<%= f.hobbies_field :hobbies %></div>
-
-  #<div><%= f.submit "Update" %></div>
-#<% end %>

@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
-
+<div class="user-box">
+<%= image_tag @post.user.avatar.url(:thumb), class: 'profile' %>
+<%= link_to @post.user.name, @post.user %>
+</div>
 <p>
-  <b>User:</b>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <b>Content:</b>
   <%= @post.content %>
 </p>
+<%= image_tag @post.avatar.url if @post.avatar.exists? %>
+    <div class="<%= @post.class %>-<%= @post.id %>">
 
+<%= link_to pluralize(@comments.count, 'comment'), @post, class: 'comments' %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= render 'shared/form' %>
+<%= render @comments  %>

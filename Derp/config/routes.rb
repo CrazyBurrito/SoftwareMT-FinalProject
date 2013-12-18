@@ -11,12 +11,16 @@ Derp::Application.routes.draw do
     root :to => 'home#newsfeed'
     root :to => 'users#index'
   end
-
+    match 'follow' => 'users#follow'
+    match 'unfollow' => 'users#unfollow'
+    match 'like' => 'users#like'
+    match 'unlike' => 'users#unlike'
   get '/preferences' => 'users#preferences', as: 'preferences'
   get '/editprefs' => 'users#editprefs', as: 'editprefs'
   root :to => 'home#index'
   devise_for :users
   resources :users
+  resources :comments
 
 end
 
